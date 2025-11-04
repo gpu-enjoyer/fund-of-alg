@@ -4,7 +4,10 @@
 
 ## Getting started
 
-Для начала необходимо настроить свой python environment. Рекомендуется использовать [miniconda](https://docs.anaconda.com/miniconda) и python 3.10 и выше. Вам также необходимо будет скачать последние версии numpy, matplotlib и других библиотек, перечисленных в `requirements.txt`. Находясь в ваш python environment, вы можете это сделать через
+Для начала необходимо настроить свой python environment.  
+Рекомендуется использовать [miniconda](https://docs.anaconda.com/miniconda) и python 3.10 и выше.  
+Вам также необходимо будет скачать последние версии numpy, matplotlib и других библиотек, перечисленных в `requirements.txt`.  
+Находясь в ваш python environment, вы можете это сделать через
 ```bash
 $ cd /path/to/your/repo/clone
 $ pip install -r requirements.txt

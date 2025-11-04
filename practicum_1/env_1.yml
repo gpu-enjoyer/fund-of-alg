@@ -1,0 +1,12 @@
+name: env_1
+prefix: /home/user/miniconda3/envs/env_1
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - ipykernel
+  - numpy
+  - matplotlib
+  - pip
+  - pip:
+    - rich
