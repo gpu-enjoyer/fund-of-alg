@@ -1,47 +1,63 @@
 
-# Conda + Jupyter guide
+# Conda guide
 
-## Install
 
-### Download Jupyter extension for VS Code
-```bash
-code --install-extension ms-toolsai.jupyter
-```
-
-### Download and install Miniconda
+## Install Miniconda (or any Conda)
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
+
+# ... ?
+yes
 
 # Do you wish ... automatically initialize conda? ...
 no
 ```
 
+
 ## Usage
 
-### Create Conda environment 'env'
+### Create Conda environment
 ```bash
 # Empty:
-conda env create -f env.yml
+conda env create --name my_env --no-default-packages
 
-# Or from file:
-conda create -n env --file env.yml --no-default-packages
+# or) From file
+conda env create --file my_env.yml
+```
+
+
+### Check if the installation was successfull ?
+```bash
+conda env list
+
+# Get minimal file
+conda env export --name my_env --from-history > my_env_test.yml
+
+# or) With dependencies
+conda env export --name my_env > my_env_test.yml
+```
+
+#### if not) You can remove
+```bash
+conda env remove -n my_env
 ```
 
 
 ### Workflow
 
-#### Like this:
+#### then) Install, export to file
 ```bash
-conda activate env
+conda activate my_env
 conda install new_lib
-conda env export > env.yml
+# conda env export ...
+conda deactivate
 ```
 
-#### Or like that:
+#### or) Edit file, update changes
 ```bash
-# Add new_lib to env.yml ...
-conda env update -f env.yml --prune
+# Edit my_env.yml ...
+conda env update -f my_env.yml --prune
 ```
 
-#### Then commit `env.yml` to share changes ...
+### Then commit `my_env.yml` to share changes ...
