@@ -1,0 +1,11 @@
+name: env_2
+channels:
+  - defaults
+dependencies:
+  - matplotlib
+  - networkx
+  - numpy
+  - python=3.12
+  - pip
+  - ipykernel
+prefix: /home/user/miniconda3/envs/env_2
